@@ -20,7 +20,7 @@ public class Date {
     public Date(String dateStr) {
         int slashIndex;
         try {
-
+            // main block of code goes here
         } catch (NumberFormatException e) {
             System.out.println("Invalid format - For input string: ");
         } // end try/catch exception handling
@@ -35,8 +35,9 @@ public class Date {
     public String getError() {
         return error;
     } // end getError method
+//******************************************************************************
 
     public String substring() {
-        return "hello";
-    }
+        return null;
+    } // end substring method
 } // end Date class
