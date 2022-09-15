@@ -6,9 +6,6 @@
  **************************************************************************** */
 package dateprocessing;
 
-import java.time.LocalDateTime; // Import the LocalDateTime class
-import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
-import java.util.Locale; // Import the Locale class
 import java.util.Scanner; // Import the Scanner class
 
 public class DateProcessing {
@@ -24,14 +21,7 @@ public class DateProcessing {
             if ("q".equalsIgnoreCase(userInput)) {
                 break;
             } else {
-                // string
-                String myString = userInput;
-                // Create a date object
-                LocalDateTime myObject = LocalDateTime.parse(myString);
-                DateTimeFormatter myFormatObj
-                        = DateTimeFormatter.ofPattern("MMMM dd", Locale.US);
-                String formattedDate = myObject.format(myFormatObj);
-                System.out.println("Date is " + formattedDate);
+
             } // end if/else condition
         } while (!userInput.equalsIgnoreCase("q")); // end while loop
     } // end main method  
