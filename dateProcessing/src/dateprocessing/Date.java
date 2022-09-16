@@ -25,7 +25,7 @@ public class Date {
 //******************************************************************************
 
     public void Date(String dateStr) {
-        int slashIndex = 0;
+        int slashIndex;
         String currentStringToProcess = "";
         try {
             this.dateStr = dateStr;
@@ -35,7 +35,7 @@ public class Date {
             month = Integer.parseInt(currentStringToProcess);
             currentStringToProcess = dateStr.substring(slashIndex + 1);
             day = Integer.parseInt(currentStringToProcess);
-        } catch (Exception e) {
+        } catch (NumberFormatException e) {
             System.out.println("Invalid format - For input string: "
                     + "\"" + currentStringToProcess + "\"");
         } // end try/catch exception handling
