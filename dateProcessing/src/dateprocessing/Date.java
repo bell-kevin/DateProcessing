@@ -9,7 +9,6 @@ package dateprocessing;
 public class Date {
 
     private String dateStr;
-    private int index;
     int day, month; //instance variables
     String error = null; //instance variables
     static final String[] MONTHS = {"January", "February", "March", "April",
@@ -29,7 +28,6 @@ public class Date {
         String currentStringToProcess = "";
         try {
             this.dateStr = dateStr;
-            index = dateStr.indexOf(' ');
             slashIndex = dateStr.indexOf('/');
             currentStringToProcess = dateStr.substring(0, slashIndex);
             month = Integer.parseInt(currentStringToProcess);
