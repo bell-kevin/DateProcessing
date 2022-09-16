@@ -23,11 +23,11 @@ public class DateProcessing {
             } else {
                 date = new Date(dateStr);
                 String error = date.getError();
-                if (error == null){
+                if (error == null) {
                     date.printResults();
-               } else {
+                } else {
                     System.out.println(error);
-                    }
+                } // end if/else condition
             } // end if/else condition
         } while (!dateStr.equalsIgnoreCase("q")); // end while loop
     } // end main method
