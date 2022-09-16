@@ -6,22 +6,24 @@
  **************************************************************************** */
 package dateprocessing;
 
-import java.util.Scanner; // Import the Scanner class
+import java.util.Scanner;
 
 public class DateProcessing {
 
     public static void main(String[] args) {
         System.out.println("Ch 15 Date Processing Project by Kevin Bell \n");
         Scanner computerKeyboardInput = new Scanner(System.in);
-        String userInput;
+        String dateStr;
+        Date date = new Date();
         do {
             System.out.print("Enter a date in format mm/dd (\"q\" to quit): ");
-            userInput = computerKeyboardInput.nextLine();
-            if ("q".equalsIgnoreCase(userInput)) {
+            dateStr = computerKeyboardInput.next();
+            if ("q".equalsIgnoreCase(dateStr)) {
                 break;
             } else {
-                //main block of code here
+                date.Date(dateStr);
             } // end if/else condition
-        } while (!userInput.equalsIgnoreCase("q")); // end while loop
-    } // end main method  
-} // end DateProcessing class
+        } while (!dateStr.equalsIgnoreCase("q")); // end while loop
+        date.printResults();
+    } // end main method
+} // end ProcessDate class
