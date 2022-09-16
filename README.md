@@ -34,7 +34,11 @@ Run the program as outlined in the sample session, with errors, and take a scree
 
 # Output
 
-![example](https://github.com/bell-kevin/DateProcessing/blob/main/dateProcessing.PNG)
+![output](https://github.com/bell-kevin/DateProcessing/blob/main/dateProcessing.PNG)
+
+More Output
+
+![validData](https://github.com/bell-kevin/DateProcessing/blob/main/validDates.PNG)
 
 Submission:the specified screenshots and the root folder for the project
 
