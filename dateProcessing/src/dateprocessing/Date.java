@@ -25,22 +25,19 @@ public class Date {
 //******************************************************************************
 
     public void Date(String dateStr) {
-        int slashIndex = 0;
+        int slashIndex = 0, subStringStart=0;
+        String currentStringToProcess = "";
         try {
             this.dateStr = dateStr;
             index = dateStr.indexOf(' ');
-            if (index != -1) {
-                System.out.println(dateStr.substring(index));
-            }// end if condition
             slashIndex = dateStr.indexOf('/');
-            month = Integer.parseInt(dateStr.substring(0, slashIndex));
-            if (slashIndex != -1) {
-                //System.out.println(dateStr.substring(slashIndex + 1));
-            }// end if condition
-            day = Integer.parseInt(dateStr.substring(slashIndex + 1));
+            currentStringToProcess = dateStr.substring(0, slashIndex);
+            month = Integer.parseInt(currentStringToProcess);      
+            currentStringToProcess = dateStr.substring(slashIndex + 1);
+            day = Integer.parseInt(currentStringToProcess);
         } catch (NumberFormatException e) {
             System.out.println("Invalid format - For input string: "
-                    + "\"" + dateStr.substring(0, slashIndex) + "\"");
+                    + "\"" + currentStringToProcess + "\"");
         } // end try/catch exception handling
     } // end Date constructor method
 //******************************************************************************
