@@ -26,4 +26,4 @@ public class DateProcessing {
         } while (!dateStr.equalsIgnoreCase("q")); // end while loop
         date.printResults();
     } // end main method
-} // end ProcessDate class
+} // end DateProcessing class
