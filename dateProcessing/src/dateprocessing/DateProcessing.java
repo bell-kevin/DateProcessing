@@ -24,6 +24,5 @@ public class DateProcessing {
                 date.Date(dateStr);
             } // end if/else condition
         } while (!dateStr.equalsIgnoreCase("q")); // end while loop
-        date.printResults();
     } // end main method
 } // end DateProcessing class
