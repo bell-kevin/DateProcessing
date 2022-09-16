@@ -25,14 +25,14 @@ public class Date {
 //******************************************************************************
 
     public void Date(String dateStr) {
-        int slashIndex = 0, subStringStart=0;
+        int slashIndex = 0;
         String currentStringToProcess = "";
         try {
             this.dateStr = dateStr;
             index = dateStr.indexOf(' ');
             slashIndex = dateStr.indexOf('/');
             currentStringToProcess = dateStr.substring(0, slashIndex);
-            month = Integer.parseInt(currentStringToProcess);      
+            month = Integer.parseInt(currentStringToProcess);
             currentStringToProcess = dateStr.substring(slashIndex + 1);
             day = Integer.parseInt(currentStringToProcess);
         } catch (NumberFormatException e) {
