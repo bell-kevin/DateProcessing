@@ -8,6 +8,8 @@ package dateprocessing;
 
 public class Date {
 
+    private String dateStr;
+    private int index;
     int day, month; //instance variables
     String error = null; //instance variables
     static final String[] MONTHS = {"January", "February", "March", "April",
@@ -17,27 +19,33 @@ public class Date {
         31, 30, 31}; // class constant
 //******************************************************************************
 
-    public Date(String dateStr) {
-        int slashIndex;
-        try {
-            // main block of code goes here
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid format - For input string: ");
-        } // end try/catch exception handling
-    } // end Constructor method
-//******************************************************************************
-
     public void printResults() {
-
+        System.out.println("ending program now");
     } // end printResults method
 //******************************************************************************
 
-    public String getError() {
-        return error;
-    } // end getError method
+    public void Date(String dateStr) {
+        int slashIndex = 0;
+        try {
+            this.dateStr = dateStr;
+            index = dateStr.indexOf(' ');
+            if (index != -1) {
+                System.out.println(dateStr.substring(index));
+            }// end if condition
+            slashIndex = dateStr.indexOf('/');
+            month = Integer.parseInt(dateStr.substring(0, slashIndex));
+            if (slashIndex != -1) {
+                //System.out.println(dateStr.substring(slashIndex + 1));
+            }// end if condition
+            day = Integer.parseInt(dateStr.substring(slashIndex + 1));
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid format - For input string: "
+                    + "\"" + dateStr.substring(0, slashIndex) + "\"");
+        } // end try/catch exception handling
+    } // end Date constructor method
 //******************************************************************************
 
-    public String substring() {
-        return null;
-    } // end substring method
+    public void getError() {
+    } // end getError method
+//******************************************************************************
 } // end Date class
