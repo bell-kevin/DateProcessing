@@ -19,8 +19,8 @@ public class Date {
 //******************************************************************************
 
     public void printResults() {
-        System.out.println("Date " + month + "/" + day + " is "
-                + MONTHS[month] + " " + day);
+        System.out.println("Date " + month + "/" + day + " is " + MONTHS[month]
+                + " " + day);
     } // end printResults method
 //******************************************************************************
 
