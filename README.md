@@ -32,6 +32,8 @@ Driver class notes:
 
 Run the program as outlined in the sample session, with errors, and take a screenshot. Run it again with 5 valid dates and take a screenshot of the results.
 
+![example](https://github.com/bell-kevin/DateProcessing/blob/main/dateProcessing.PNG)
+
 Submission:the specified screenshots and the root folder for the project
 
 Pay careful attention to the rubric for this assignment.
