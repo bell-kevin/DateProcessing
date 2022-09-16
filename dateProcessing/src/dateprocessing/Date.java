@@ -35,7 +35,7 @@ public class Date {
             month = Integer.parseInt(currentStringToProcess);
             currentStringToProcess = dateStr.substring(slashIndex + 1);
             day = Integer.parseInt(currentStringToProcess);
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println("Invalid format - For input string: "
                     + "\"" + currentStringToProcess + "\"");
         } // end try/catch exception handling
